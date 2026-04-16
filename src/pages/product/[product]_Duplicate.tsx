@@ -7,7 +7,7 @@ const HalamanProduk = () => {
     return (
         <div>
             <h1>Halaman Produk</h1> <br />
-            <p>Produk : {query.id}</p>
+            <p>Produk : {query.product}</p>
         </div>
     );
 };
