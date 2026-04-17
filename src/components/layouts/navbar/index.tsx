@@ -1,5 +1,6 @@
 import styles from './navbar.module.css';
-import { signIn, signOut, useSession } from "next-auth/react"
+import { signIn, signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 
 const Navbar = () => {
   const {data}:any = useSession()
@@ -15,6 +16,15 @@ const Navbar = () => {
         {data ? (
           <>
             <div className={styles.navbar__user}>
+              {data.user?.image && (
+                <Image 
+                  src={data.user.image}
+                  alt={data.user.fullname} 
+                  width={40}
+                  height={40}
+                  className={styles.navbar__user__image}
+                />
+              )}
               Welcome, {data.user?.fullname}
             </div>
             <button

@@ -25,10 +25,22 @@
 }
 /* Welcome text */
 .navbar__user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 16px;
   font-weight: 600;
   opacity: 0.9;
 }
+/* Avatar Image */
+.navbar__user__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+}
+
 /* Button */
 .navbar__button {
   padding: 8px 18px;
