@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Register View renders register view correctly 1`] = `
+<div>
+  <div
+    class="register"
+  >
+    <h1
+      class="register__title"
+    >
+      Halaman Register
+    </h1>
+    <div
+      class="register__form"
+    >
+      <form>
+        <div
+          class="register__form__item"
+        >
+          <label
+            class="register__form__item__label"
+            for="email"
+          >
+            Email
+          </label>
+          <input
+            class="register__form__item__input"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required=""
+            type="email"
+          />
+        </div>
+        <div
+          class="register__form__item"
+        >
+          <label
+            class="register__form__item__label"
+            for="fullname"
+          >
+            Fullname
+          </label>
+          <input
+            class="register__form__item__input"
+            id="fullname"
+            name="fullname"
+            placeholder="Fullname"
+            required=""
+            type="text"
+          />
+        </div>
+        <div
+          class="register__form__item"
+        >
+          <label
+            class="register__form__item__label"
+            for="password"
+          >
+            Password
+          </label>
+          <input
+            class="register__form__item__input"
+            id="password"
+            minlength="6"
+            name="password"
+            placeholder="Password (minimal 6 karakter)"
+            required=""
+            type="password"
+          />
+        </div>
+        <button
+          class="register__form__item__button"
+          type="submit"
+        >
+          Register
+        </button>
+      </form>
+      <br />
+      <p
+        class="register__form__item__text"
+      >
+        Sudah punya akun? 
+        <a
+          href="/auth/login"
+        >
+          Ke Halaman Login
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;

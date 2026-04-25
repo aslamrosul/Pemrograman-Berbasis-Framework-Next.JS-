@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Product Page Wrapper renders product page wrapper correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="produk"
+    >
+      <h1
+        class="produk__title"
+        data-testid="title"
+      >
+        Daftar Produk
+      </h1>
+      <div
+        class="produk__content"
+      >
+        <a
+          class="produk__content__item"
+          href="/product/1"
+        >
+          <div
+            class="produk__content__item__image"
+          >
+            <img
+              alt="Test Product"
+              data-nimg="1"
+              decoding="async"
+              height="200"
+              loading="lazy"
+              src="/_next/image?url=%2Ftest.jpg&w=640&q=75"
+              srcset="/_next/image?url=%2Ftest.jpg&w=256&q=75 1x, /_next/image?url=%2Ftest.jpg&w=640&q=75 2x"
+              style="color: transparent;"
+              width="200"
+            />
+          </div>
+          <h4
+            class="produk__content__item__name"
+          >
+            Test Product
+          </h4>
+          <p
+            class="produk__content__item__category"
+          >
+            Test
+          </p>
+          <p
+            class="produk__content__item__price"
+          >
+            Rp 
+            100.000
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

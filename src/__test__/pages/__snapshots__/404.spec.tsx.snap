@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`404 Page renders 404 page correctly 1`] = `
+<div>
+  <div
+    class="error"
+  >
+    <img
+      alt="404 Not Found"
+      class="error__image"
+      data-nimg="1"
+      decoding="async"
+      height="200"
+      loading="lazy"
+      src="/_next/image?url=%2Fpage-not-found.png&w=828&q=75"
+      srcset="/_next/image?url=%2Fpage-not-found.png&w=640&q=75 1x, /_next/image?url=%2Fpage-not-found.png&w=828&q=75 2x"
+      style="color: transparent;"
+      width="400"
+    />
+    <h1
+      class="error__title"
+    >
+      404 - Halaman Tidak Ditemukan
+    </h1>
+    <p
+      class="error__description"
+    >
+      Maaf, halaman yang Anda cari tidak tersedia atau telah dipindahkan.
+    </p>
+    <a
+      class="error__button"
+      href="/"
+    >
+      Kembali ke Beranda
+    </a>
+  </div>
+</div>
+`;

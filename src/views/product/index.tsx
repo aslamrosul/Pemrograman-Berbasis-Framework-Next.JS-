@@ -16,16 +16,14 @@ const formatPrice = (price: number) => {
 };
 
 const TampilanProduk = ({ products }: { products: ProductType[] }) => {
-  // Safety check untuk products
-  const safeProducts = products || [];
-  
+  // Safety check untuk products  
   return (
     <div className={styles.produk}>
-      <h1 className={styles.produk__title}>Daftar Produk</h1>
+      <h1 className={styles.produk__title} data-testid="title">Daftar Produk</h1>
       <div className={styles.produk__content}>
-        {safeProducts.length > 0 ? (
+        {products?.length > 0 ? (
           <>
-            {safeProducts.map((product: ProductType) => (
+            {products?.map((product: ProductType) => (
               <Link href={`/product/${product.id}`} key={product.id} className={styles.produk__content__item}>
                 <div className={styles.produk__content__item__image}>
                   <Image 
