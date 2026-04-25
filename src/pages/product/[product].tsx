@@ -28,42 +28,44 @@ const HalamanProduk = ({ product }: { product: ProductType }) => {
 
 export default HalamanProduk;
 
-// Digunakan server-side rendering
-// export async function getServerSideProps({ params }: { params: { product: string } }) {
-//   const res = await fetch(`http://localhost:3000/api/product/${params.product}`);
-//   const response = await res.json();
-//   // console.log("Data produk yang diambil dari API:", response);
-//   return {
-//     props: {
-//       product: response.data, // Pastikan untuk memberikan nilai default jika data tidak tersedia
-//     },
-//   };
-// }
-
-// Digunakan static-site generation
-export async function getStaticPaths() {
-  const res = await fetch('http://localhost:3000/api/product');
+ {/Digunakan server-side rendering/}
+export async function getServerSideProps({ params }: { params: { product: string } }) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product/${params.product}`);
   const response = await res.json();
-
-  const paths = response.data.map((product: ProductType) => ({
-    params: { product: product.id }
-  }));
-  // console.log("Paths yang dihasilkan untuk produk:", paths); // Debugging: Tampilkan paths yang dihasilkan
-  return {
-    paths,
-    fallback: false
-  };
-}
-
-export async function getStaticProps({ params }: { params: { product: string } }) {
-  const res = await fetch(`http://localhost:3000/api/product/${params.product}`);
-  // const response: ProductType[] = await res.json();
-  const response: { data: ProductType } = await res.json();
-
   // console.log("Data produk yang diambil dari API:", response);
   return {
     props: {
-      product: response.data,
-    }
+      product: response.data, // Pastikan untuk memberikan nilai default jika data tidak tersedia
+    },
   };
 }
+
+// saat deploy tidak bisa menggunakan server-side-rendering, karena kita tidak bisa melakukan fetch data dari localhost, maka digunakan static-site generatiom
+// {/Digunakan static-site generation/}
+// export async function getStaticPaths() {
+//   const res = await fetch('http://localhost:3000/api/product');
+//   const response = await res.json();
+
+//   const paths = response.data.map((product: ProductType) => ({
+//     params: { product: product.id }
+//   }));
+//   // console.log("Paths yang dihasilkan untuk produk:", paths); // Debugging: Tampilkan paths yang dihasilkan
+//   return {
+//     paths,
+//     fallback: false
+//   };
+// }
+
+// saat deploy tidak bisa menggunakan server-side-rendering, karena kita tidak bisa melakukan fetch data dari localhost, maka digunakan static-site generatiom
+// export async function getStaticProps({ params }: { params: { product: string } }) {
+//   const res = await fetch(`http://localhost:3000/api/product/${params.product}`);
+//   // const response: ProductType[] = await res.json();
+//   const response: { data: ProductType } = await res.json();
+
+//   // console.log("Data produk yang diambil dari API:", response);
+//   return {
+//     props: {
+//       product: response.data,
+//     }
+//   };
+// }

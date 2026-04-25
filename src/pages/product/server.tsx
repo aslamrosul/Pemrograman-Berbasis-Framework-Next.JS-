@@ -15,7 +15,7 @@ export default halamanProdukServer;
 
 export async function getServerSideProps() {
   try {
-    const res = await fetch("http://localhost:3000/api/product");
+    const res = await fetch('${process.env.NEXT_PUBLIC_API_URL}/api/product');
     const response = await res.json();
     console.log("SSR Response:", response);
     return {
